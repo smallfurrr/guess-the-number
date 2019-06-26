@@ -24,6 +24,8 @@ function header:
 hasWon( guessedNumber, secretNumber )
 ```
 
+It has a conditional inside that determines if you've won or not.
+
 If this function returns true, tell the user they have won.
 
 ### further
