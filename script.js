@@ -21,13 +21,10 @@ var playTotal = document.getElementById("playtotal");
 var winsTotal = document.getElementById("wins");
 var lossTotal = document.getElementById("losses");
 
-//Function that runs when submit button is clicked
-var clicked = function () {
-    var userGuess = inputBox.value;
+
+var parseTheGuess = function(userGuess) {
     var parsedGuess = parseInt(userGuess);
-    if (parsedGuess === easterEgg) {
-        resultDisplay.textContent = "cannot leh";
-    } else if (parsedGuess === secretNumber) {
+    if (parsedGuess === secretNumber) {
         resultDisplay.textContent = "You got it!";
         wins.push(1);
         winsTotal.innerHTML = wins.length;
@@ -42,5 +39,14 @@ var clicked = function () {
     console.log(secretNumber);
 }
 
-//Event listener for button
+//Function that runs when submit button is clicked
+var clicked = function () {
+    var userGuess = inputBox.value;
+    if (userGuess === easterEgg) {
+        resultDisplay.textContent = "cannot leh";
+    } else {
+        parseTheGuess(userGuess);
+    }
+}
+
 document.getElementById("submit").addEventListener("click", clicked);
