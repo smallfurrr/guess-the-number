@@ -1,22 +1,22 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100|Josefin+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <input class="starter" id="input" placeholder="input"/>
-    <h2>output:</h2>
-    <p class="starter" id="output"></p>
-    <script>
-      document.querySelector('#input').addEventListener('change', function(event){
-        var currentInput = event.target.value;
-        inputHappened(currentInput)
-      });
-
-      var display = function( data ){
-        var output = document.querySelector('#output');
-        output.innerText = data;
-      }
-    </script>
+<h2>Guess The Number!</h2>
+<img src = "images/thinking.png" height = 150>
+<h4>Hint: It's between 0 and 10</h4>
+    <input type="text" id="guess">
+    <input type="submit" id="submit">
+    <br><br>
+    <div id="result"></div>
+    <h4>Total times played</h4>
+    <div id="playtotal"></div>
+    <h4>Wins</h4>
+    <div id="wins"></div>
+    <h4>Losses</h4>
+    <div id="losses"></div>
     <script src="script.js"></script>
   </body>
 </html>
